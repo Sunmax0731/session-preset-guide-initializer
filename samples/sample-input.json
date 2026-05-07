@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": "session-preset-1",
+      "title": "導入プリセット・操作ガイド・セッション初期化 サンプル 1",
+      "presetName": "release-start",
+      "prompt": "Goal / Context / Constraints / Done when",
+      "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
+      "startupChecks": [
+        "git status",
+        "npm test"
+      ]
+    },
+    {
+      "id": "session-preset-missing-required",
+      "title": "必須項目不足サンプル",
+      "prompt": "Goal / Context / Constraints / Done when",
+      "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
+      "startupChecks": [
+        "git status",
+        "npm test"
+      ]
+    }
+  ]
+}
