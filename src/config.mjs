@@ -1,7 +1,7 @@
 export const productConfig = {
   "repo": "session-preset-guide-initializer",
-  "titleJa": "導入プリセット・操作ガイド・セッション初期化",
-  "summary": "作業開始時のプリセットと初期チェック",
+  "titleJa": "セッションプリセット・ガイド初期化",
+  "summary": "作業開始時のプリセット、初期チェック、ガイドをひとつの入力として整える。",
   "requiredFields": [
     "presetName",
     "prompt",

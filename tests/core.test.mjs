@@ -4,8 +4,9 @@ import { analyzeItems, renderMarkdownReport } from '../src/core.mjs';
 
 test('valid sample passes required field checks', () => {
   const report = analyzeItems({ items: [{
-  "id": "session-preset-1",
-  "title": "導入プリセット・操作ガイド・セッション初期化 サンプル 1",
+  "id": "session-preset-guide-initializer-1",
+  "title": "セッションプリセット・ガイド初期化 サンプル1",
+  "status": "ready",
   "presetName": "release-start",
   "prompt": "Goal / Context / Constraints / Done when",
   "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
@@ -20,8 +21,9 @@ test('valid sample passes required field checks', () => {
 
 test('missing required field is reported', () => {
   const report = analyzeItems({ items: [{
-  "id": "session-preset-missing-required",
+  "id": "session-preset-guide-initializer-missing-required",
   "title": "必須項目不足サンプル",
+  "status": "ready",
   "prompt": "Goal / Context / Constraints / Done when",
   "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
   "startupChecks": [

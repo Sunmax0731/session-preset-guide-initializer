@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
-  "description": "作業開始時のプリセット、プロンプト、初期チェックをテンプレート化する。",
+  "description": "作業開始時のプリセット、初期チェック、ガイドをひとつの入力として整える。",
   "scripts": {
     "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs",
     "validate": "npm test",
@@ -12,7 +12,9 @@
   "keywords": [
     "projectmanagement",
     "session-preset",
-    "mvp"
+    "mvp",
+    "qcds",
+    "pre-release"
   ],
   "license": "MIT"
 }

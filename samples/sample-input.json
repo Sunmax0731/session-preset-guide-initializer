@@ -2,7 +2,7 @@
   "items": [
     {
       "id": "session-preset-guide-initializer-1",
-      "title": "導入プリセット・操作ガイド・セッション初期化 サンプル 1",
+      "title": "セッションプリセット・ガイド初期化 サンプル1",
       "status": "ready",
       "presetName": "release-start",
       "prompt": "Goal / Context / Constraints / Done when",
