@@ -191,7 +191,7 @@
           "description": "docs ZIPが生成済みである",
           "kind": "zip",
           "pass": true,
-          "detail": "session-preset-guide-initializer-docs.zip 10085 bytes"
+          "detail": "session-preset-guide-initializer-docs.zip exists and exceeds minimum size"
         }
       ]
     },
