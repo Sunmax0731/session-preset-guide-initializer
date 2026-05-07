@@ -1,0 +1,138 @@
+{
+  "product": "session-preset-guide-initializer",
+  "title": "セッションプリセット・ガイド初期化",
+  "benchmarkRepos": [
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "requiredFields": [
+    "presetName",
+    "prompt",
+    "targetWorkspace",
+    "startupChecks"
+  ],
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "purpose": "作業開始プリセット、プロンプト、ワークスペース、初期チェックの正常入力を確認する",
+      "input": {
+        "items": [
+          {
+            "id": "session-preset-guide-initializer-happy",
+            "title": "セッションプリセット・ガイド初期化 happy",
+            "presetName": "release-start",
+            "prompt": "Goal / Context / Constraints / Done when",
+            "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
+            "startupChecks": [
+              "git status",
+              "npm test"
+            ],
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足をerrorとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "session-preset-guide-initializer-missing-required",
+            "title": "セッションプリセット・ガイド初期化 missing-required",
+            "prompt": "Goal / Context / Constraints / Done when",
+            "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
+            "startupChecks": [
+              "git status",
+              "npm test"
+            ],
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "blocked-status",
+      "purpose": "blocked状態をwarningとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "session-preset-guide-initializer-blocked",
+            "title": "セッションプリセット・ガイド初期化 blocked",
+            "presetName": "release-start",
+            "prompt": "Goal / Context / Constraints / Done when",
+            "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
+            "startupChecks": [
+              "git status",
+              "npm test"
+            ],
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須不足、警告を同一バッチで集計する",
+      "input": {
+        "items": [
+          {
+            "id": "session-preset-guide-initializer-happy",
+            "title": "セッションプリセット・ガイド初期化 happy",
+            "presetName": "release-start",
+            "prompt": "Goal / Context / Constraints / Done when",
+            "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
+            "startupChecks": [
+              "git status",
+              "npm test"
+            ],
+            "status": "ready"
+          },
+          {
+            "id": "session-preset-guide-initializer-missing-required",
+            "title": "セッションプリセット・ガイド初期化 missing-required",
+            "prompt": "Goal / Context / Constraints / Done when",
+            "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
+            "startupChecks": [
+              "git status",
+              "npm test"
+            ],
+            "status": "ready"
+          },
+          {
+            "id": "session-preset-guide-initializer-blocked",
+            "title": "セッションプリセット・ガイド初期化 blocked",
+            "presetName": "release-start",
+            "prompt": "Goal / Context / Constraints / Done when",
+            "targetWorkspace": "D:\\AI\\ProjectManagement\\session-preset-guide-initializer",
+            "startupChecks": [
+              "git status",
+              "npm test"
+            ],
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}
