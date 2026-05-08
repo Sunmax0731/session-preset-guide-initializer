@@ -1,0 +1,8 @@
+{
+  "product": "session-preset-guide-initializer",
+  "platformType": "cli-release-tool",
+  "pass": true,
+  "method": "runtime-gate",
+  "manualTest": "not-run-by-codex",
+  "packageTest": true
+}
